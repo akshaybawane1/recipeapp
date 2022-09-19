@@ -59,7 +59,9 @@ const SignUp = () => {
                                 return Res.json()
                         }else{
                                 return Res.json().then((data)=>{
-                                        let errorMsg = "Failed to authenticate"
+                                        // console.log(data.error.message)
+                                        let errorMsg = data.error.message || "Failed to authenticate"
+                                        // console.log(errorMsg)
                                         throw new Error(errorMsg)
                                 })
                         }
@@ -68,6 +70,8 @@ const SignUp = () => {
                         dispatch(LogInActions.Login(data.idToken))
                 }).catch((err)=>{
                         console.log(err)
+                        dispatch(RecipeActions.setErrorMsg(err.toString()))
+                        func()
                 })
         }
 
