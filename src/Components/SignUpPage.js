@@ -12,8 +12,6 @@ const SignUp = () => {
         const email = useRef()
         const password = useRef()
 
-        // const ThrottleError = useSelector(state=>state.Recipes.ThrottleError)
-
         const ThrottleError = ()=>{
                 // console.log("Throttle Triggered")
                 
@@ -69,8 +67,8 @@ const SignUp = () => {
                         // console.log(data.idToken)
                         dispatch(LogInActions.Login(data.idToken))
                 }).catch((err)=>{
-                        console.log(err)
-                        dispatch(RecipeActions.setErrorMsg(err.toString()))
+                        // console.log(err)
+                        dispatch(RecipeActions.setErrorMsg(err.message.toString()))
                         func()
                 })
         }

@@ -106,7 +106,7 @@ const EditRecipeForm = () => {
   }
 
   return (
-    <Card className={`${classes.MyForm} ${classes.RecipeForm} ${showEditForm ? classes.show : ""}`}>
+    <Card className={`${classes.MyForm} ${classes.RecipeForm} ${classes.mobCenter} ${showEditForm ? classes.show : ""}`}>
       <form onSubmit={handleSubmit}>
         <h1>Edit your recipe</h1>
         <input ref={newName} defaultValue={name} placeholder="Name of Dish" required />

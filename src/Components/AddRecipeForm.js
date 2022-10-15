@@ -102,7 +102,7 @@ const AddRecipeForm = () => {
   }
 
   return (
-    <Card className={`${classes.MyForm} ${classes.RecipeForm} ${showRecipeForm ? classes.show : ""}`}>
+    <Card className={`${classes.MyForm} ${classes.RecipeForm} ${classes.mobCenter} ${showRecipeForm ? classes.show : ""}`}>
       <form onSubmit={handleSubmit}>
         <h1>Add new recipe</h1>
         <input value={name} onChange={ChangeName} placeholder="Name of Dish"  required/>

@@ -60,7 +60,7 @@ const AddIngredient = () => {
             newIngred.current.value = ""
         }
   return (
-    <Card className={`${classes.MyForm} ${classes.RecipeForm} ${showIngredientForm ? classes.show : ""}`}>
+    <Card className={`${classes.MyForm} ${classes.RecipeForm} ${classes.mobCenter} ${showIngredientForm ? classes.show : ""}`}>
       <form onSubmit={handleSubmit}>
         <h1>Add new Ingredient</h1>
         <input ref={newIngred} placeholder="Name of Ingredient" />

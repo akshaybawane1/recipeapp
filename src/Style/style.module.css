@@ -267,5 +267,9 @@ h4{
                 margin-left: 122px;
         }
 
+        .mobCenter{
+                position: fixed;
+                left:14%;
+        }
 
 }
